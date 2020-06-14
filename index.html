@@ -59,7 +59,79 @@
       <!-- Hero -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <a href="" class="button">Заказать услугу</a>
+        <button class="button" data-modal-open>Заказать услугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <form class="form">
+              <button class="close"></button>
+              <b class="recall">Оставьте свои данные, мы вам перезвоним</b>
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=" "
+                />
+                <label class="form-label" for="name">Имя</label>
+                <svg class="form-icon">
+                  <use href="./image/sprite1.svg#icon-person"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder=" "
+                />
+                <label class="form-label" for="tel">Телефон</label>
+                <svg class="form-icon">
+                  <use href="./image/sprite1.svg#icon-phone"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=" "
+                />
+                <label class="form-label" for="email">Почта</label>
+                <svg class="form-icon">
+                  <use href="./image/sprite1.svg#icon-email1"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <textarea
+                  class="comment"
+                  name="comment"
+                  id="comment"
+                  rows="8"
+                  placeholder="Комментарий"
+                ></textarea>
+              </div>
+              <div class="form-field">
+                <label class="agreement" for="agreement">
+                  <input
+                    class="checkbox-agreement visually-hidden"
+                    type="checkbox"
+                    name="agreement"
+                    id="agreement"
+                  />
+                  <span class="checkbox-icon"></span>
+                  Соглашаюсь с рассылкой и принимаю
+                  <a href="">Условия договора</a>
+                </label>
+              </div>
+              <button type="submit" class="button secondary" data-modal-close>
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
 
       <!-- Advantages -->
@@ -444,12 +516,25 @@
 
         <div class="signup">
           <b class="invitation">Подпишитесь на рассылку</b>
-          <a href="" class="button">Подписаться</a>
+          <input
+            class="signup-input"
+            type="text"
+            name="email"
+            placeholder="E-mail"
+          />
+          <button class="button signup-button">
+            Подписаться
+            <svg class="signup-icon" width="24" height="24">
+              <use href="./image/sprite1.svg#icon-icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
 
       <!-- Сopyright -->
       <p class="copyright container">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
